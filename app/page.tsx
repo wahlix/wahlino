@@ -2,52 +2,32 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground p-8 space-y-12">
-      {/* Logotyp */}
-      <section className="flex items-center justify-center">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground p-6 text-center">
+      {/* Logo */}
+      <div className="mb-8">
         <Image
           src="/wahlino-logo.png"
           alt="Wahlino logo"
           width={200}
           height={200}
+          className="mx-auto rounded-md"
           priority
         />
-      </section>
+      </div>
 
-      {/* Rubriker (Playfair Display) */}
-      <section className="space-y-4 text-center">
-        <h1 className="text-5xl font-[var(--font-playfair)]">Wahlino Casino</h1>
-        <h2 className="text-3xl font-[var(--font-playfair)]">
-          Blackjack • Poker • Bingo
-        </h2>
-      </section>
+      {/* Coming soon */}
+      <h1 className="text-4xl font-[var(--font-playfair)] mb-4">Wahlino Casino</h1>
+      <p className="text-lg font-sans text-muted-foreground max-w-md">
+        Vi bygger just nu upp en modern kasinoupplevelse.<br />
+        Snart kan du spela Blackjack, Poker och Bingo här!
+      </p>
 
-      {/* Brödtext & UI (Oswald som sans) */}
-      <section className="max-w-2xl mx-auto text-center space-y-4">
-        <p className="font-sans text-lg">
-          Välkommen till <span className="font-bold">Wahlino</span> – där turen
-          möter strategin. Prova våra klassiska spel i en modern online-upplevelse.
-        </p>
-        <button className="bg-primary text-primary-foreground font-sans px-6 py-3 rounded-lg shadow hover:opacity-90 transition">
-          Spela nu
-        </button>
-      </section>
-
-      {/* Bankroll (Geist Mono) */}
-      <section className="text-center space-y-2">
-        <h3 className="text-xl font-sans">Din Bankroll</h3>
-        <p className="font-[var(--font-geist-mono)] text-2xl tracking-wider">
-          1 250 kr
-        </p>
-      </section>
-
-      {/* Färgtest */}
-      <section className="flex justify-center gap-4 pt-8">
-        <div className="w-16 h-16 rounded-lg bg-primary" title="primary" />
-        <div className="w-16 h-16 rounded-lg bg-secondary" title="secondary" />
-        <div className="w-16 h-16 rounded-lg bg-accent" title="accent" />
-        <div className="w-16 h-16 rounded-lg bg-muted" title="muted" />
-      </section>
+      {/* Liten badge/knapp */}
+      <div className="mt-8">
+        <span className="inline-block px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-sans shadow">
+          🚧 Under konstruktion
+        </span>
+      </div>
     </main>
   )
 }
