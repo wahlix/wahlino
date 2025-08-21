@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Playfair_Display, Oswald } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import Header from "@/components/header";
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
         <body
           className={`${playfair.variable} ${oswald.variable} ${geistMono.variable} antialiased`}
         >
+          <Header />
           {children}
         </body>
       </html>
