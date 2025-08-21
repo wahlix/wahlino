@@ -3,6 +3,8 @@
 import Link from "next/link"
 import Image from 'next/image'
 
+import StatusDot from "@/components/statusDot"
+
 export default function Header() {
     return (
         <header className="w-full">
@@ -24,6 +26,9 @@ export default function Header() {
                     <Link href={"/blackjack"}>Blackjack</Link>
                     <Link href={"/status"}>Status</Link>
                 </nav>
+                <div className="flex items-center gap-4">
+                    <StatusDot />
+                </div>
             </div>
         </header>
     )
