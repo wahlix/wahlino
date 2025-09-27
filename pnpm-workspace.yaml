@@ -1,4 +1,9 @@
 onlyBuiltDependencies:
+  - '@clerk/shared'
+  - '@newrelic/fn-inspect'
+  - '@newrelic/native-metrics'
+  - '@sentry/cli'
   - '@tailwindcss/oxide'
+  - protobufjs
   - sharp
   - unrs-resolver
